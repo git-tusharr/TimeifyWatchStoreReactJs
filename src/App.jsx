@@ -1,6 +1,7 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Layout from "../Layout";
-import Home from "../pages/Home";
+import Layout from "./Layout";
+import Home from "./pages/Home";
+import AdminDashBoard from "./AdminDashBoard";
 
 
 const App=()=>{
@@ -12,6 +13,12 @@ const App=()=>{
         <Route index element={<Home/>}></Route>
         </Route>
       </Routes>
+
+       <Routes>
+             <Route path="/admin" element={<AdminDashBoard/>}>
+             </Route>
+
+          </Routes>
     </BrowserRouter>
     </>
   )

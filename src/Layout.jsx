@@ -4,9 +4,10 @@ import Home from "./pages/Home";
 const Layout=()=>{
     return(
         <>
-        <TopNavBar></TopNavBar>
         
+        <TopNavBar></TopNavBar>
         <Home></Home>
+        
         </>
     )
 }
