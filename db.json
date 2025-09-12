@@ -1,27 +1,34 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"Digital Watch",
-            "brand":"Titan",
-            "category":"womens",
-            "price":20000,
-            "images":"dfghfdhfghf"
-        }
-    ],
-
-    "admin":[
-        {
-            "id":1,
-            "adminname":"ADMIN",
-            "adminid":"admin@gmail.com",
-            "password":"admin123"
-        },
-        {
-            "id":2,
-            "adminname":"Raj",
-            "adminid":"raj@gmail.com",
-            "password":"raj123"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Digital Watch",
+      "brand": "Titan",
+      "category": "womens",
+      "price": 20000,
+      "images": "dfghfdhfghf"
+    },
+    {
+      "id": "265d",
+      "name": "s4000",
+      "category": "male",
+      "brand": "Titan",
+      "price": "15000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757612003/dom6vkybiueylbjgjnyv.png"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "adminname": "ADMIN",
+      "adminid": "admin@gmail.com",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "adminname": "Raj",
+      "adminid": "raj@gmail.com",
+      "password": "raj123"
+    }
+  ]
 }
