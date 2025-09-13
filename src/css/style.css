@@ -6,6 +6,45 @@
           font-size: 24px;
         }
 
+
+#top-nav-bar{
+  position: sticky;
+  z-index: 1;
+  top: 0;
+
+}
+#top-nav-bar1{
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  width: 100%;
+
+
+}
+
+
+#admin-login-btn{
+padding: 20PX;
+margin-left: 20px ;  
+}
+#add-to-cart{
+  display: flex;
+  flex-direction: column;
+}
+
+#add-to-cart span {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  background-color: red;
+  border-radius: 20px;
+  position: 10px;
+}
+
+
 #adminleftmenu{
     width: 20%;
     background-color: #333;
@@ -17,3 +56,9 @@
 
 }
 
+
+#our-top-products{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}

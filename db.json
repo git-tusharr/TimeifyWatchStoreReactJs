@@ -1,20 +1,20 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Digital Watch",
-      "brand": "Titan",
-      "category": "womens",
-      "price": 20000,
-      "images": "dfghfdhfghf"
-    },
-    {
       "id": "265d",
       "name": "s4000",
       "category": "male",
       "brand": "Titan",
       "price": "15000",
       "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757612003/dom6vkybiueylbjgjnyv.png"
+    },
+    {
+      "id": "a824",
+      "name": "The Oyster Perpetual Cosmograph Daytona, GMT‑Master II",
+      "brand": "Rolex",
+      "category": "male",
+      "price": "45000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757757644/pryoucscgaxdzwzxrpse.avif"
     }
   ],
   "admin": [

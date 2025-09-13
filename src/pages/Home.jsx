@@ -10,7 +10,55 @@ import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
 
+import { useState,useEffect } from 'react';
+import axios from 'axios';
+
 const Home=()=>{
+
+  const [watch,setWatch]=useState([]);
+
+  const loadata=async()=>{
+    let api="http://localhost:3000/products";
+    const response=await axios.get(api);
+    console.log(response.data);
+    setWatch(response.data)
+  }
+
+  useEffect(()=>{
+    loadata();
+  },[])
+
+
+  const ans=watch.map((key)=>{
+    return(
+      <>
+
+      <div>
+      <Card style={{ width: '18rem', margin:"10px" }}>
+      <Card.Img variant="top" src={key.images}  height="300px" />
+      <Card.Body>
+        <Card.Title>{key.brand}</Card.Title>
+        <Card.Text>
+           {key.name}
+           <br />
+           <span style={{color:"Black"}}>Category : {key.category}</span> 
+           <br />
+           <span style={{color:"navy" , fontWeight:"bold"}}>Price : {key.price}</span> 
+        </Card.Text>
+        <Button variant="primary">Add To Cart</Button>
+      </Card.Body>
+    </Card>
+      </div>
+
+
+
+      
+      </>
+    )
+  })
+
+
+
     return(
         <>
 
@@ -119,6 +167,9 @@ const Home=()=>{
     </div>
 
     </div>
+
+
+
        <div style={{ backgroundColor: "black", padding: "50px 0" }}>
   <div style={{ fontSize: "50px", textAlign: "center", marginBottom: "50px" }}>
     <span style={{ color: "yellow" }}>Shop by</span>{" "}
@@ -165,6 +216,25 @@ const Home=()=>{
       </Card.Body>
     </Card>
   </div>
+</div>
+
+
+<div id='our-top-products'>
+
+  <div style={{ fontSize: "50px", textAlign: "center", marginBottom: "50px" }}>
+
+    <span style={{ color: "yellow" }}>Our Top</span>{" "}
+    <span style={{ color: "white" }}>Selling</span>
+    <p style={{ fontSize: "20px", color: "white", marginTop: "20px" }}>
+      Explore exclusive timepieces from the world's most prestigious watchmakers
+    </p>
+
+  </div >
+
+      <div style={{display:"flex"}}>
+        {ans}
+      </div>
+
 </div>
 
   

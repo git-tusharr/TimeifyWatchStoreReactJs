@@ -14,7 +14,7 @@ const AdminDashBoard = () => {
         id="admindisplay"
         style={{
           display: "flex",
-          height: "calc(100vh - 70px)", // full height minus header
+         
         }}
       >
         {/* Left Menu */}
@@ -24,12 +24,11 @@ const AdminDashBoard = () => {
         >
           <Link
             to="addproducts"
-            className="adminmenu"
+            className="adminmenu"n
             style={{
               color: "white",
-              textDecoration: "none",
               backgroundColor: "#444",
-              padding: "10px 20px",
+              padding:"10px",
               borderRadius: "5px",
               marginBottom: "10px",
               width: "80%",

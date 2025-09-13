@@ -13,6 +13,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
+import { RiShoppingCart2Line } from "react-icons/ri";
+
 
 
 
@@ -52,6 +54,8 @@ const handleSubmit = async (e) => {
 
     return(
         <>
+
+        <div id='top-nav-bar'>
        
 
       <div style={{marginBottom:"-30px"}}>
@@ -87,13 +91,25 @@ const handleSubmit = async (e) => {
             <Nav.Link href="#about">About us</Nav.Link>
             
           </Nav>
-                <Button variant="primary" onClick={handleShow}>
+          <div id='admin-login-btn'>
+            <Button variant="primary" onClick={handleShow}>
                    Admin Login
-                </Button>
+            </Button>
+          </div>
+                
+
+
+                <div id='add-to-cart'>
+                 <span style={{color:"white"}}>3</span>
+                 < RiShoppingCart2Line color="white" size={24} />
+                </div>
+
+
+              
         </Container>
         
       </Navbar>
-      
+      </div>
       <br />
     </div>  
 
