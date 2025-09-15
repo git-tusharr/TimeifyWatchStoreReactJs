@@ -5,14 +5,18 @@ import { FaSquareMinus } from "react-icons/fa6";
 import { FaRupeeSign } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { incQnty, decQnty, cartDataRemove  } from "../cartSlice";
+import { useNavigate } from "react-router-dom";
 
 const MyCart = () => {
     const CartData = useSelector((state) => state.mycart.cart);
-   const dispatch = useDispatch();
-    
+    const dispatch = useDispatch();
+   const navigate = useNavigate();  
+   const CheckOut=()=>{
+       navigate("/checkout")
+   }
+
    let TotalAmount=0;
     const ans = CartData.map((key) => {
-
          TotalAmount+=key.price*key.qnty;
         return (
             <>
@@ -28,25 +32,21 @@ const MyCart = () => {
                           <FaPlusSquare onClick={()=>{dispatch(incQnty({id:key.id}))}} /> 
                         </td>
                     <td> 
-                        
                         {key.price * key.qnty} 
-                        
                          </td>
                          <td>
-     
                           <button onClick={()=>{dispatch(cartDataRemove({id:key.id}))}}> Delete </button>
-
                          </td>
                 </tr>
             </>
         )
     })
-
-
     return (
         <>
             <h1> Cart Data</h1>
-            <h3 align="center">Total Amount : <FaRupeeSign /> {TotalAmount}</h3>
+            <h3 align="center">Total Amount : <FaRupeeSign /> {TotalAmount}
+             <button onClick={CheckOut}>Checkout</button>
+            </h3>  
               <Table striped bordered hover>
       <thead>
         <tr>
@@ -64,8 +64,8 @@ const MyCart = () => {
          {ans}
       </tbody>
 </Table>
+ 
         </>
     )
 }
-
 export default MyCart;

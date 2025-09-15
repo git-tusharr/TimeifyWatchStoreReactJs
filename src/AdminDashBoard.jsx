@@ -37,6 +37,22 @@ const AdminDashBoard = () => {
           >
             Upload Product
           </Link>
+
+          <Link
+            to="Customers"
+            className="adminmenu"n
+            style={{
+              color: "white",
+              backgroundColor: "#444",
+              padding:"10px",
+              borderRadius: "5px",
+              marginBottom: "10px",
+              width: "80%",
+              textAlign: "center",
+            }}
+          >
+            View Coustomers
+          </Link>
         </div>
 
         {/* Right Content Area */}

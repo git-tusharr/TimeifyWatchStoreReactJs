@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import AdminDashBoard from "./AdminDashBoard";
 import AddProducts from "./AdminPages/AddProducts";
 import MyCart from "./pages/myCart";
+import PaymentDone from "./pages/paymentDone";
+import CheckOut from "./pages/CheckOut";
+import Customers from "./AdminPages/Customers";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -17,6 +20,8 @@ const App=()=>{
         <Route index element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="mycart" element={<MyCart/>}/>
+        <Route path="checkout" element={<CheckOut/>}/>
+        <Route path="paydone" element={<PaymentDone/>}/>
 
         </Route>
       </Routes>
@@ -24,6 +29,8 @@ const App=()=>{
         <Routes>
              <Route path="/admin" element={<AdminDashBoard/>}>
              <Route path="addproducts" element={<AddProducts/>}></Route>
+            <Route path="Customers" element={<Customers/>}/>
+
              </Route>
 
         </Routes>
