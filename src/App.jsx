@@ -3,6 +3,9 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import AdminDashBoard from "./AdminDashBoard";
 import AddProducts from "./AdminPages/AddProducts";
+import MyCart from "./pages/myCart";
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 const App=()=>{
@@ -12,6 +15,9 @@ const App=()=>{
       <Routes>
         <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="mycart" element={<MyCart/>}/>
+
         </Route>
       </Routes>
 
@@ -21,6 +27,8 @@ const App=()=>{
              </Route>
 
         </Routes>
+
+        <ToastContainer position="top-right" autoClose={2000} />
     </BrowserRouter>
     </>
   )

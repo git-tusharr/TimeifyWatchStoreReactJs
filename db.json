@@ -15,6 +15,46 @@
       "category": "male",
       "price": "45000",
       "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757757644/pryoucscgaxdzwzxrpse.avif"
+    },
+    {
+      "id": "c7eb",
+      "name": "Classic Rolex Submariner Silver",
+      "brand": "Rolex",
+      "category": "male",
+      "price": "₹550,000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757831510/ljvxw9hu4lx5dfdmbxat.avif"
+    },
+    {
+      "id": "602d",
+      "name": "Classic Rolex land dwellerSilver",
+      "brand": "Rolex",
+      "category": "male",
+      "price": "₹950,000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757831655/oehlzsp1bo22bgz4kemw.avif"
+    },
+    {
+      "id": "690e",
+      "name": "Classic 1995 OMEGA Seamaster 300M",
+      "brand": "Omega",
+      "category": "male",
+      "price": "₹250,000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757831907/cebgo6bjpzxwrivfdqz4.avif"
+    },
+    {
+      "id": "874b",
+      "name": "Minimal Black Rolex Boxed Watch",
+      "brand": "Rolex",
+      "category": "male",
+      "price": "₹520,000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757832132/k19zq9p0vmty2gtu9kxh.jpg"
+    },
+    {
+      "id": "a6f9",
+      "name": "Minimal Black Rolex Boxed Watch",
+      "brand": "Rolex",
+      "category": "male",
+      "price": "₹520,000",
+      "images": "http://res.cloudinary.com/dksfrrypv/image/upload/v1757832157/j4diqalvvh8x4zdukhds.jpg"
     }
   ],
   "admin": [

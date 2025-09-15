@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 
@@ -15,11 +16,9 @@ import Modal from 'react-bootstrap/Modal';
 
 import { RiShoppingCart2Line } from "react-icons/ri";
 
-
-
-
-
 const TopNavBar=()=>{
+  const CartData= useSelector(state=>state.mycart.cart);
+  const CartLength= CartData.length;
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -96,16 +95,11 @@ const handleSubmit = async (e) => {
                    Admin Login
             </Button>
           </div>
-                
-
-
-                <div id='add-to-cart'>
-                 <span style={{color:"white"}}>3</span>
-                 < RiShoppingCart2Line color="white" size={24} />
-                </div>
-
-
               
+                <div id='add-to-cart'>
+                 <span style={{color:"white"}}>{CartLength}</span>
+                 < RiShoppingCart2Line color="white" size={24} onClick={()=>{navigate("/mycart")}}/>
+                </div>
         </Container>
         
       </Navbar>

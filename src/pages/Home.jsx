@@ -10,10 +10,16 @@ import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../cartSlice';
+
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 
+import Footer from '../component/Footer';
+
 const Home=()=>{
+  const dispatch=useDispatch();
 
   const [watch,setWatch]=useState([]);
 
@@ -35,7 +41,7 @@ const Home=()=>{
 
       <div>
       <Card style={{ width: '18rem', margin:"10px" }}>
-      <Card.Img variant="top" src={key.images}  height="300px" />
+      <Card.Img variant="top" src={key.images}  height="400px" />
       <Card.Body>
         <Card.Title>{key.brand}</Card.Title>
         <Card.Text>
@@ -45,7 +51,7 @@ const Home=()=>{
            <br />
            <span style={{color:"navy" , fontWeight:"bold"}}>Price : {key.price}</span> 
         </Card.Text>
-        <Button variant="primary">Add To Cart</Button>
+        <Button variant="primary" onClick={()=>{dispatch(addToCart({id:key.id,name:key.name,brand:key.brand,category:key.category,price:key.price,images:key.images,qnty:1}))}}>Add To Cart</Button>
       </Card.Body>
     </Card>
       </div>
@@ -231,18 +237,13 @@ const Home=()=>{
 
   </div >
 
-      <div style={{display:"flex"}}>
+      <div id='watch-cards'>
         {ans}
       </div>
 
 </div>
 
-  
 
-
-
-
-    
         </>
     )
 }

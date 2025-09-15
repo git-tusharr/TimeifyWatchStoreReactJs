@@ -1,17 +1,20 @@
+import { Outlet } from "react-router-dom";
 import TopNavBar from "./component/TopNavBar";
-import Home from "./pages/Home";
+import Footer from "./component/Footer";
 
-const Layout=()=>{
-    return(
-        <>
-       <div id="top-nav-bar">
-            <TopNavBar />
-        </div>
+const Layout = () => {
+  return (
+    <>
+      <div id="top-nav-bar">
+        <TopNavBar />
+      </div>
 
-        
-        <Home></Home>
-        
-        </>
-    )
-}
+      <Outlet />
+
+
+      <Footer/>
+    </>
+  );
+};
+
 export default Layout;

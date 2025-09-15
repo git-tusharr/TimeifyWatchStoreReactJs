@@ -1,5 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+
+import { toast } from 'react-toastify';
+
 import { useState } from 'react';
 import axios from 'axios';
 const AddProducts=()=>{
@@ -30,7 +33,7 @@ const AddProducts=()=>{
         let api="http://localhost:3000/products";
         const response1 = await axios.post(api, {...input, images:response.data.url});
 
-        alert("Product Succesfully Added!");
+        toast.success("Product added Succesfully!");
 
  }
 
@@ -52,10 +55,33 @@ const AddProducts=()=>{
         <Form.Select name="brand" aria-label="Default select example" onChange={handleInput}>
       <option>Select Brand</option>
       <option value="Titan">Titan</option>
-      <option value="Sonata">Sonata</option>
-      <option value="Fossil">Fossil</option>
-       <option value="Rolex">Rolex</option>
-        <option value="Omega">Omega</option>
+<option value="Sonata">Sonata</option>
+<option value="Fossil">Fossil</option>
+<option value="Rolex">Rolex</option>
+<option value="Casio">Casio</option>
+<option value="Timex">Timex</option>
+<option value="Seiko">Seiko</option>
+<option value="Omega">Omega</option>
+<option value="Tissot">Tissot</option>
+<option value="Daniel Wellington">Daniel Wellington</option>
+<option value="Rado">Rado</option>
+<option value="Tag Heuer">Tag Heuer</option>
+<option value="Hublot">Hublot</option>
+<option value="Citizen">Citizen</option>
+<option value="Diesel">Diesel</option>
+<option value="Armani Exchange">Armani Exchange</option>
+<option value="Longines">Longines</option>
+<option value="Cartier">Cartier</option>
+<option value="Movado">Movado</option>
+<option value="IWC Schaffhausen">IWC Schaffhausen</option>
+<option value="Jaeger-LeCoultre">Jaeger-LeCoultre</option>
+<option value="Patek Philippe">Patek Philippe</option>
+<option value="Audemars Piguet">Audemars Piguet</option>
+<option value="Michael Kors">Michael Kors</option>
+<option value="Apple">Apple</option>
+<option value="Samsung">Samsung</option>
+
+        
     </Form.Select>
       </Form.Group>
 
