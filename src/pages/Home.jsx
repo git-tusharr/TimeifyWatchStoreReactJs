@@ -13,6 +13,8 @@ import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
 
+import b1 from "../images/b1.jpg"
+
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../cartSlice';
 
@@ -20,6 +22,7 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 import Footer from '../component/Footer';
+import { Bs1Circle } from 'react-icons/bs';
 
 const Home=()=>{
   const dispatch=useDispatch();
@@ -215,7 +218,7 @@ const Home=()=>{
 
     {/* Brand 3 */}
     <Card style={{ width: "18rem" }}>
-      <Card.Img style={{ height: "18rem" }} variant="top" src={card3} />
+      <Card.Img style={{ height: "18rem" }} variant="top" src={b1} />
       <Card.Body>
         <Card.Title>Tag Heuer</Card.Title>
         <Card.Text>
