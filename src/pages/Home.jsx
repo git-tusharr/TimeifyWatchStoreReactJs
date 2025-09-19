@@ -30,7 +30,7 @@ const Home=()=>{
   const [watch,setWatch]=useState([]);
 
   const loadata=async()=>{
-    let api="http://localhost:3000/products";
+    let api=`${import.meta.env.VITE_API_URL}/products`;
     const response=await axios.get(api);
     console.log(response.data);
     setWatch(response.data)
