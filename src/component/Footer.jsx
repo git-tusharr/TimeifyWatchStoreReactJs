@@ -7,6 +7,9 @@ const Footer = () => {
         <Row className="text-center">
           <Col md={4}>
            
+
+
+           
       <h5>Timefy</h5>    
             <p>Serving for you.</p>
           </Col>

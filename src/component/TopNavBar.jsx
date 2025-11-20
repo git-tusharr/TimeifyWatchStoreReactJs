@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 
-//For modal
+
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
