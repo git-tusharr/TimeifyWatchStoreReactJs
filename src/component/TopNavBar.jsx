@@ -9,8 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
-
-
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
